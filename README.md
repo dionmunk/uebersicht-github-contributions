@@ -27,7 +27,7 @@ At the top of `index.coffee`:
 
 ## Screenshot
 
-![Screenshot](screenshots/screenshot.png)
+![Screenshot](screenshot.png)
 
 ## Installation
 
