@@ -18,7 +18,7 @@ style: """
   left 1000px
 
   color var(--text, #fff)
-  text-shadow: 0 1px 1px rgba(20, 1, 1, 0.10)
+  text-shadow: 0 1px 1px rgba(20, 1, 1, 0.2)
   font-family -apple-system, BlinkMacSystemFont, system-ui, sans-serif
   display inline-block
 
@@ -54,7 +54,7 @@ update: (output, domEl) ->
 
   # Five-shade scales for contribution levels 0–4. Toggle with `mode` up top.
   palettes =
-    color:      ['var(--level-base, rgba(255,255,255,.1))', 'rgba(var(--apple-green-ch, 255,255,255), .25)', 'rgba(var(--apple-green-ch, 255,255,255), .5)', 'rgba(var(--apple-green-ch, 255,255,255), .75)', 'rgba(var(--apple-green-ch, 255,255,255), 1)']
+    color:      ['var(--level-base, rgba(255,255,255,.1))', 'rgba(var(--green-ch, 255,255,255), .25)', 'rgba(var(--green-ch, 255,255,255), .5)', 'rgba(var(--green-ch, 255,255,255), .75)', 'rgba(var(--green-ch, 255,255,255), 1)']
     monochrome: ['rgba(255,255,255,.06)', 'rgba(255,255,255,.2)', 'rgba(255,255,255,.45)', 'rgba(255,255,255,.7)', 'rgba(255,255,255,1)']
   colors = palettes[@mode] ? palettes.monochrome
   DAY = 86400000
