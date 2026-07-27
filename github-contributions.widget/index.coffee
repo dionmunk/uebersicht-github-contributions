@@ -10,6 +10,9 @@ span: '6mo'
 
 command: "GH_USER='dionmunk'; curl -s \"https://github.com/users/$GH_USER/contributions\" | grep -oE 'data-date=\"[0-9-]+\"[^>]*data-level=\"[0-9]\"' | sed -E 's/.*data-date=\"([0-9-]+)\"[^>]*data-level=\"([0-9]\").*/\\1,\\2/' | grep -oE '[0-9-]+,[0-9]'"
 
+# Enable or disable this widget.
+widgetEnabled: true   # true | false
+
 refreshFrequency: 1800000 # 30 minutes
 
 style: """
@@ -50,6 +53,11 @@ render: -> """
 """
 
 update: (output, domEl) ->
+  # Hide entirely when disabled.
+  if not @widgetEnabled
+    $(domEl).css('display', 'none')
+    return
+  $(domEl).css('display', '')
   root = $(domEl)
 
   # Five-shade scales for contribution levels 0–4. Toggle with `mode` up top.
