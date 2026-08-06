@@ -16,9 +16,9 @@ widgetEnabled: true   # true | false
 refreshFrequency: 1800000 # 30 minutes
 
 style: """
-  // grid: col 4 · row 1 (top, just right of the weather widget in col 3)
+  // grid: col 3 · row 1 (see LAYOUT.md)
   top 10px
-  left 1000px
+  left 670px
 
   color var(--text, #fff)
   text-shadow: 0 1px 1px rgba(20, 1, 1, 0.2)
